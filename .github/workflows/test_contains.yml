@@ -20,7 +20,6 @@ jobs:
   
     strategy:
       matrix:
-        a: [a, b]
         b: [1.0.0, 1.1.1, 2.2.2]
         
     # The type of runner that the job will run on
@@ -34,11 +33,11 @@ jobs:
       # Runs 
       - name: Run a one-line script
         run: |
-          echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
+          echo test matrix b = ${{ matrix.b }}
 
       # Runs 
-      - if: contains('Hello world', 'llow')
+      - if: contains({{ matrix.b }}, '1.1.1')
         name: Run a one-line script, contains
         run: |
-          echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
+          echo test matrix b = ${{ matrix.b }}
 
