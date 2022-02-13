@@ -20,7 +20,7 @@ jobs:
   
     strategy:
       matrix:
-        b: [1.0.0, 1.1.1, 2.2.2]
+        b: [2.8.0, 2.7.1, 2.6.3, 2.5.3]
         
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -33,18 +33,21 @@ jobs:
       # Runs 
       - name: Run a one-line script
         run: |
+          export BITBAKE_OPTION="python3-tensorflow-lite"
           echo test matrix b = ${{ matrix.b }}
           mkdir conf
           case "${{ matrix.b }}" in
-          1.1.*)
-            export ADD_STRING=PREFERRED_VERSION_python3-tensorflow-lite="${{ matrix.b }}"
+          2.5.*)
+            export PREFERRED_VERSION_CPP="PREFERRED_VERSION_cpp-tensorflow-lite="${{ matrix.b }}""
+            export BITBAKE_OPTION="${BITBAKE_OPTION} cpp-tensorflow-lite"
             ;;
           esac
           
           cat <<EOF > conf/auto.conf
           PREFERRED_VERSION_python3-tensorflow-lite="${{ matrix.b }}"
-          ${ADD_STRING}
+          ${PREFERRED_VERSION_CPP}
           EOF
           cat conf/auto.conf
+          echoe ${BITBAKE_OPTION}
 
 
