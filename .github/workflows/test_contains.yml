@@ -37,8 +37,8 @@ jobs:
           echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
 
       # Runs 
-      - name: Run a one-line script, contains
-        if: contains('1.1.1', ${{ matrix.b }})
+      - if: contains('1.1.1', '${{ matrix.b }}')
+        name: Run a one-line script, contains
         run: |
           echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
 
