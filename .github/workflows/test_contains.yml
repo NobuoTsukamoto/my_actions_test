@@ -37,8 +37,8 @@ jobs:
           echo test matrix b = ${{ matrix.b }}
           mkdir conf
           case "${{ matrix.b }}" in
-          2.5.*)
-            export PREFERRED_VERSION_CPP="PREFERRED_VERSION_cpp-tensorflow-lite="${{ matrix.b }}""
+          2.8.*|2.7.*|2.6.*)
+            export PREFERRED_VERSION_CPP=PREFERRED_VERSION_cpp-tensorflow-lite=""${{ matrix.b }}""
             export BITBAKE_OPTION="${BITBAKE_OPTION} cpp-tensorflow-lite"
             ;;
           esac
