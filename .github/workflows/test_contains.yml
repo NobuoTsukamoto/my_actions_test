@@ -20,8 +20,8 @@ jobs:
   
     strategy:
       matrix:
-        a: [a, b, c, d]
-        b: [1.0.0, 1.1.1, 2.2.2, 3.3.3]
+        a: [a, b]
+        b: [1.0.0, 1.1.1, 2.2.2]
         
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -37,8 +37,8 @@ jobs:
           echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
 
       # Runs 
-      - name: Run a one-line script
-        if: contains("1.1.1", ${{ matrix.b }}) }}
+      - name: Run a one-line script, contains
+        if: contains("1.1.1", "2.2.2")
         run: |
           echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
 
