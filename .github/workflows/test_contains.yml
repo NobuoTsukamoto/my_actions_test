@@ -34,5 +34,11 @@ jobs:
       # Runs 
       - name: Run a one-line script
         run: |
-          echo test matrix a = ${{ matrix.a }}, b = {{ matrix.b }}
+          echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
+
+      # Runs 
+      - name: Run a one-line script
+        if: contains("1.1.1", ${{ matrix.b }}) }}
+        run: |
+          echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
 
