@@ -38,13 +38,13 @@ jobs:
           mkdir conf
           case "${{ matrix.b }}" in
           2.8.*|2.7.*|2.6.*)
-            export PREFERRED_VERSION_CPP=PREFERRED_VERSION_cpp-tensorflow-lite=""${{ matrix.b }}""
+            export PREFERRED_VERSION_CPP=PREFERRED_VERSION_cpp-tensorflow-lite=\"${{ matrix.b }}\"
             export BITBAKE_OPTION="${BITBAKE_OPTION} cpp-tensorflow-lite"
             ;;
           esac
           
           cat <<EOF > conf/auto.conf
-          PREFERRED_VERSION_python3-tensorflow-lite="${{ matrix.b }}"
+          PREFERRED_VERSION_python3-tensorflow-lite=""${{ matrix.b }}"
           ${PREFERRED_VERSION_CPP}
           EOF
           cat conf/auto.conf
