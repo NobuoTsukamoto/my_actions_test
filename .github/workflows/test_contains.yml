@@ -35,12 +35,12 @@ jobs:
       - name: Run a one-line script
         run: |
           echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
-          echo ${{ contains('1.1.1', '${{ matrix.b }}') }}
+          echo ${{ contains('1.1.1', ${{ matrix.b }}) }}
 
       # Runs 
       - if: contains('1.1.1', ${{ matrix.b }}) 
         name: Run a one-line script, contains
         run: |
-          echo ${{ contains('1.1.1', '${{ matrix.b }}') }}
+          echo ${{ contains('1.1.1', ${{ matrix.b }}) }}
           echo test matrix a = ${{ matrix.a }}, b = ${{ matrix.b }}
 
