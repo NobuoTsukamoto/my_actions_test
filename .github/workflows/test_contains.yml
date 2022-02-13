@@ -48,6 +48,6 @@ jobs:
           ${PREFERRED_VERSION_CPP}
           EOF
           cat conf/auto.conf
-          echoe ${BITBAKE_OPTION}
+          echo ${BITBAKE_OPTION}
 
 
