@@ -31,6 +31,43 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs 
+      - name: Check space before cleanup
+        run: |
+          docker images
+          sudo rm -rf "/opt/ghc" || true
+          sudo rm -rf "/usr/share/dotnet" || true
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY" || true
+          sudo rm -rf "/usr/local/lib/android" || true
+          sudo rm -rf "/usr/local/share/boost" || true
+          sudo rm -rf /opt/hostedtoolcache/CodeQL || true
+          sudo docker image prune --all --force
+          sudo apt purge \
+            ansible \
+            aria2 \
+            azure-cli \
+            bazel \
+            cabal* \
+            clang* \
+            dotnet-sdk* \
+            ghc* \
+            google-chrome-stable \
+            google-cloud-sdk \
+            heroku \
+            kubectl \
+            mysql* \
+            node* \
+            npm* \
+            php* \
+            powershell \
+            rpm \
+            ruby* \
+            subversion \
+            yarn \
+            -yq || true
+          sudo apt-get autoremove -y || true
+          sudo apt-get autoclean -y || true
+          df -h
+
       - name: Run a one-line script
         run: |
           export BITBAKE_OPTION="python3-tensorflow-lite"
