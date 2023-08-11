@@ -30,19 +30,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Before
-        run: |      
-          echo "Free space:"
-          df -h
-
-      -name: Do
-        run: |      
-        sudo rm -rf "/opt"
-        sudo docker image prune --all --force
-        sudo rm -rf "/usr/local/share/*"
-        sudo apt-get autoremove -y
-        sudo apt-get autoclean -y
-
       - name: Build
         run: |
           echo "Free space:"
