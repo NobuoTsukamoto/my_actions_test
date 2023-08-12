@@ -70,6 +70,7 @@ jobs:
             moby-cli \
             moby-buildx \
             moby-compose \
+            hhvm \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
