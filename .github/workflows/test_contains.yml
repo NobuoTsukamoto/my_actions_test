@@ -52,7 +52,6 @@ jobs:
             ghc* \
             google-chrome-stable \
             google-cloud-sdk \
-            firefox \
             kubectl \
             mysql* \
             node* \
@@ -63,8 +62,14 @@ jobs:
             ruby* \
             subversion \
             yarn \
+            firefox \
             mono-complete \
             nuget \
+            apache2 \
+            moby-engine \
+            moby-cli \
+            moby-buildx \
+            moby-compose \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
