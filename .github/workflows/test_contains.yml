@@ -78,7 +78,7 @@ jobs:
             moby-buildx \
             moby-compose \
             microsoft-edge-stable \
-            mongodb-org \
+            mongodb* \
             nginx \
             postgresql* \
             libpq-dev \
