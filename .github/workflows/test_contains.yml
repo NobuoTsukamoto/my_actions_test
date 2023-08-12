@@ -51,7 +51,7 @@ jobs:
             ghc* \
             google-chrome-stable \
             google-cloud-sdk \
-            heroku \
+            firefox \
             kubectl \
             mysql* \
             node* \
