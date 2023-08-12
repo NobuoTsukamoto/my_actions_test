@@ -42,6 +42,11 @@ jobs:
           sudo rm -rf "/usr/share/swift" || true
           sudo rm -rf "/usr/local/julia*" || true
           sudo rm -rf "/usr/share/kotlinc" || true
+          sudo rm -rf "/usr/local/share/edge_driver" || true
+          sudo rm -rf "/usr/local/share/chromedriver-linux64" || true
+          sudo rm -rf "/usr/local/share/gecko_driver" || true
+          sudo rm -rf "/usr/share/miniconda" || true
+          sudo rm -rf "/usr/local/share/phantomjs*" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           sudo apt purge \
@@ -72,6 +77,9 @@ jobs:
             moby-cli \
             moby-buildx \
             moby-compose \
+            microsoft-edge-stable \
+            mongodb-org \
+            nginx \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
