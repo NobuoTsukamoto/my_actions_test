@@ -47,9 +47,11 @@ jobs:
           sudo rm -rf "/usr/local/share/gecko_driver" || true
           sudo rm -rf "/usr/share/miniconda" || true
           sudo rm -rf "/usr/local/share/phantomjs*" || true
+          sudo rm -rf "/usr/share/sbt" || true
+          sudo rm -rf "/usr/local/sqlpackage" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
-          rustup self uninstall
+          rustup self uninstall -y
           sudo apt purge \
             ansible \
             aria2 \
@@ -84,6 +86,7 @@ jobs:
             postgresql* \
             libpq-dev \
             r-base \
+            sphinxsearch \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
