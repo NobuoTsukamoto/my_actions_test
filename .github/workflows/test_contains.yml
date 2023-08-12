@@ -39,6 +39,7 @@ jobs:
           sudo rm -rf "/usr/local/lib/android" || true
           sudo rm -rf "/usr/local/share/boost" || true
           sudo rm -rf "/usr/lib/jvm" || true
+          sudo rm -rf "/usr/share/swift" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           sudo apt purge \
@@ -62,6 +63,8 @@ jobs:
             ruby* \
             subversion \
             yarn \
+            mono-complete \
+            nuget \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
