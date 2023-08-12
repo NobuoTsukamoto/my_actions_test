@@ -41,6 +41,7 @@ jobs:
           sudo rm -rf "/usr/lib/jvm" || true
           sudo rm -rf "/usr/share/swift" || true
           sudo rm -rf "/usr/local/julia*" || true
+          sudo rm -rf "/usr/share/kotlinc" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           sudo apt purge \
