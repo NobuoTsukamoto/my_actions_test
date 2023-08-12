@@ -40,33 +40,6 @@ jobs:
           sudo rm -rf "/usr/local/share/boost" || true
           sudo rm -rf "/usr/lib/jvm" || true
           sudo docker image prune --all --force
-          sudo apt purge \
-            ansible \
-            aria2 \
-            azure-cli \
-            bazel \
-            cabal* \
-            clang* \
-            dotnet-sdk* \
-            ghc* \
-            google-chrome-stable \
-            google-cloud-sdk \
-            firefox \
-            heroku \
-            kubectl \
-            mysql* \
-            node* \
-            npm* \
-            php* \
-            powershell \
-            rpm \
-            ruby* \
-            subversion \
-            yarn \
-            mono-complete \
-            nuget \
-            esl-erlang \
-            -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
           ls -al /usr/share
