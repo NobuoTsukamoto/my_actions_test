@@ -80,6 +80,9 @@ jobs:
             microsoft-edge-stable \
             mongodb-org \
             nginx \
+            postgresql* \
+            libpq-dev \
+            r-base \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
