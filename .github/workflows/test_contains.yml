@@ -40,11 +40,11 @@ jobs:
           sudo rm -rf "/usr/local/share/boost" || true
           sudo rm -rf "/usr/lib/jvm" || true
           sudo docker image prune --all --force
+          sudo npm uninstall bazel
           sudo apt purge \
             ansible \
             aria2 \
             azure-cli \
-            bazel \
             cabal* \
             clang* \
             dotnet-sdk* \
