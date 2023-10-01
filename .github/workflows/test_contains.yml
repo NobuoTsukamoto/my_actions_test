@@ -61,7 +61,6 @@ jobs:
             dotnet-sdk* \
             ghc* \
             google-chrome-stable \
-            google-cloud-sdk \
             kubectl \
             mysql* \
             node* \
