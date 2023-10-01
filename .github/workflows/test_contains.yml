@@ -90,9 +90,24 @@ jobs:
             tcl \
             temurin-* \
             skopeo \
-            imagemagick \
+            imagemagick-* \
             mssql-tools18 \
             unixodbc-dev \
+            ubuntu-advantage-tools \
+            docker-* \
+            fonts-* \
+            g++-9 \
+            g++-10 \
+            g++-11 \
+            gcc-9 \
+            gcc-10 \
+            gcc-11 \
+            gcc-12 \
+            gfortran-9 \
+            gfortran-10 \
+            gfortran-11 \
+            gfortran-12 \
+            javascript-common \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
