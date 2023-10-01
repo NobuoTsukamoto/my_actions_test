@@ -91,6 +91,8 @@ jobs:
             temurin-* \
             skopeo \
             imagemagick \
+            mssql-tools18 \
+            unixodbc-dev \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
