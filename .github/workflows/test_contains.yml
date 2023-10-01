@@ -86,6 +86,11 @@ jobs:
             libpq-dev \
             r-base \
             sphinxsearch \
+            swig \
+            tcl \
+            temurin-* \
+            skopeo \
+            imagemagick \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
