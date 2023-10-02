@@ -55,6 +55,9 @@ jobs:
           sudo rm -rf "/usr/local/bin/stack" || true
           sudo rm -rf "/usr/local/bin/aliyun" || true
           sudo rm -rf "/usr/local/bin/pulumi-*" || true
+          sudo rm -rf "/usr/local/bin/azcopy" || true
+          sudo rm -rf "/usr/local/aws-cli" || true
+          sudo rm -rf "/usr/local/bin/bicep" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
