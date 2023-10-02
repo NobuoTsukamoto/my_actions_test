@@ -102,7 +102,10 @@ jobs:
             linux-cloud-tools* \
             linux-azure-6.2-* \
             hicolor-icon-theme \
-            gcc-* \
+            gcc-9 \
+            gcc-10 \
+            gcc-11 \
+            gcc-12 \
             cloud-initramfs* \
             -yq
           sudo apt-get autoremove -y
