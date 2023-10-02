@@ -91,13 +91,15 @@ jobs:
             temurin-* \
             skopeo \
             imagemagick-* \
-            mssql-tools18 \
+            mssql-tools* \
             unixodbc-dev \
             ubuntu-advantage-tools \
             docker-* \
             fonts-* \
             llvm-* \
             javascript-common \
+            openjdk-11-jre-headless \
+            linux-cloud-tools* \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
