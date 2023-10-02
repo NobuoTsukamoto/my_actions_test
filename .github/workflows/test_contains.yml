@@ -59,6 +59,8 @@ jobs:
           sudo rm -rf "/usr/local/aws-cli" || true
           sudo rm -rf "/usr/local/bin/bicep" || true
           sudo rm -rf "/usr/local/bin/rebar3" || true
+          sudo rm -rf "/usr/local/bin/phpunit" || true
+          sudo rm -rf "/usr/local/bin/packer" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
