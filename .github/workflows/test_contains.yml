@@ -108,12 +108,20 @@ jobs:
             gcc-12 \
             cloud-initramfs* \
             x11-* \
+            bind9-* \
+            cloud-* \
+            gir1.2-* \
+            golang-github-* \
+            libjs-* \
+            libllvm* \
+            nano \
+            python3-* \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
           apt list --installed
-          ls -al ~
-          ls -al /usr/share
+          ls -al ~/
+          ls -al /
           ls /opt
 
       - name: Build
