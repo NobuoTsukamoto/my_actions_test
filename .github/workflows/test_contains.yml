@@ -52,6 +52,7 @@ jobs:
           sudo rm -rf "/usr/bin/yq" || true
           sudo rm -rf "/usr/local/share/vcpkg" || true
           sudo rm -rf "/usr/local/bin/terraform" || true
+          sudo rm -rf "/usr/local/bin/stack" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
