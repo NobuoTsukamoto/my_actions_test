@@ -100,6 +100,10 @@ jobs:
             javascript-common \
             openjdk-11-jre-headless \
             linux-cloud-tools* \
+            linux-azure-6.2-* \
+            hicolor-icon-theme \
+            gcc-* \
+            cloud-initramfs* \
             -yq
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
@@ -107,6 +111,7 @@ jobs:
           ls -al ~
           ls -al /usr/share
           ls /opt
+          ls /opt/microsoft/
 
       - name: Build
         run: |
