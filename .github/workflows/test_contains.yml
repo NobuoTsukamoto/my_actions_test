@@ -122,6 +122,7 @@ jobs:
           apt list --installed
           ls -al ~/work/
           ls -al /usr/local/bin
+          ls -al /usr/share
           ls /opt
 
       - name: Build
