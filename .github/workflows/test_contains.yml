@@ -96,17 +96,10 @@ jobs:
             ubuntu-advantage-tools \
             docker-* \
             fonts-* \
-            g++-9 \
-            g++-10 \
-            g++-11 \
-            gcc-9 \
-            gcc-10 \
-            gcc-11 \
-            gcc-12 \
-            gfortran-9 \
-            gfortran-10 \
-            gfortran-11 \
-            gfortran-12 \
+            g++-* \
+            gcc-* \
+            gfortran-* \
+            llvm-* \
             javascript-common \
             -yq
           sudo apt-get autoremove -y
