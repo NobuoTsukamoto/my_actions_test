@@ -96,9 +96,6 @@ jobs:
             ubuntu-advantage-tools \
             docker-* \
             fonts-* \
-            g++-* \
-            gcc-* \
-            gfortran-* \
             llvm-* \
             javascript-common \
             -yq
