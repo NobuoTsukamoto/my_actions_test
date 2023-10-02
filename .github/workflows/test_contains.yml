@@ -120,8 +120,8 @@ jobs:
           sudo apt-get autoremove -y
           sudo apt-get autoclean -y
           apt list --installed
-          ls -al ~/
-          ls -al /
+          ls -al ~/work/
+          ls -al /usr/local/bin
           ls /opt
 
       - name: Build
