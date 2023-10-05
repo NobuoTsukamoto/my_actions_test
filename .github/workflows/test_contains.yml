@@ -54,7 +54,8 @@ jobs:
           sudo rm -rf "/usr/local/bin/terraform" || true
           sudo rm -rf "/usr/local/bin/stack" || true
           sudo rm -rf "/usr/local/bin/aliyun" || true
-          sudo rm -rf "/usr/local/bin/pulumi*" || true
+          sudo rm -rf "/usr/local/bin/pulumi" || true
+          sudo rm -rf "/usr/local/bin/pulumi-language-dotnet" || true
           sudo rm -rf "/usr/local/bin/azcopy" || true
           sudo rm -rf "/usr/local/aws-cli" || true
           sudo rm -rf "/usr/local/bin/bicep" || true
@@ -65,6 +66,11 @@ jobs:
           sudo rm -rf "/usr/local/bin/docker-compose" || true
           sudo rm -rf "$HOME/.dotnet/tools" || true
           sudo rm -rf "/etc/skel/.dotnet/tools" || true
+          sudo rm -rf "/usr/local/bin/minikube" || true
+          sudo rm -rf "/usr/local/bin/kustomize" || true
+          sudo rm -rf "/usr/local/bin/kubectl" || true
+          sudo rm -rf "/usr/local/bin/kind" || true
+          sudo rm -rf "/usr/local/bin/helm"
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
