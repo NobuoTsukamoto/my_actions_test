@@ -61,6 +61,10 @@ jobs:
           sudo rm -rf "/usr/local/bin/rebar3" || true
           sudo rm -rf "/usr/local/bin/phpunit" || true
           sudo rm -rf "/usr/local/bin/packer" || true
+          sudo rm -rf "/usr/local/bin/bicep" || true
+          sudo rm -rf "/usr/local/bin/docker-compose" || true
+          sudo rm -rf "$HOME/.dotnet/tools" || true
+          sudo rm -rf "/etc/skel/.dotnet/tools" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
@@ -128,9 +132,12 @@ jobs:
             libllvm* \
             nano \
             python3-* \
-            -yq
-          sudo apt-get autoremove -y
-          sudo apt-get autoclean -y
+            podman \
+            buildah \
+            skopeo \
+            -yq > /dev/null 2>&1 || true
+          sudo apt-get autoremove -y > /dev/null 2>&1 || true
+          sudo apt-get autoclean -y > /dev/null 2>&1 || true
           apt list --installed
           ls -al ~/work/
           ls -al /usr/local/bin
