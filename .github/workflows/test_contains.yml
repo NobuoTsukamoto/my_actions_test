@@ -154,4 +154,5 @@ jobs:
         run: |
           echo "Free space:"
           df -h
+          cat /etc/fstab
 
