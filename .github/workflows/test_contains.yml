@@ -76,8 +76,10 @@ jobs:
           sudo rm -rf "/usr/share/apache-maven-*" || true
           sudo rm -rf "/usr/share/gradle-*" || true
           sudo rm -rf "/usr/local/share/phantomjs-*" || true
+          sudo rm -rf "/usr/local/bin/azcopy*" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
+          sudo npm uninstall @bazel/bazelisk
           rustup self uninstall -y
           sudo apt purge \
             ansible \
