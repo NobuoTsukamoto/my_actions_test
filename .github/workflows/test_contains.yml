@@ -77,6 +77,8 @@ jobs:
           sudo rm -rf "/usr/share/gradle-*" || true
           sudo rm -rf "/usr/local/share/phantomjs-*" || true
           sudo rm -rf "/usr/local/bin/azcopy*" || true
+          sudo rm -rf "/usr/local/bin/bicep" || true
+          sudo rm -rf "/usr/local/bin/.ghcup" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           sudo npm uninstall @bazel/bazelisk
@@ -161,6 +163,7 @@ jobs:
             gfortran-13 \
             gcc-12-* \
             gcc-11-* \
+            google-cloud-cli \
             -yq  || true
           sudo dpkg -r packages-microsoft-prod
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
