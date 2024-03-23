@@ -154,6 +154,7 @@ jobs:
           ls -al ~/work/
           ls -al /usr/local/bin
           ls -al /usr/share
+          ls -al ~
           ls /opt
 
       - name: Build
