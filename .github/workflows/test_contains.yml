@@ -71,7 +71,9 @@ jobs:
           sudo rm -rf "/usr/local/bin/kubectl" || true
           sudo rm -rf "/usr/local/bin/kind" || true
           sudo rm -rf "/usr/local/bin/helm" || true
-          sudo rm -rf "/home/linuxbrew"
+          sudo rm -rf "/home/linuxbrew" || true
+          sudo rm -rf "/usr/share/apache-maven-*" || true
+          sudo rm -rf "/usr/share/gradle-*" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
@@ -143,6 +145,8 @@ jobs:
             buildah \
             skopeo \
             temurin-* \
+            ant \
+            ant-optional \
             -yq  || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
