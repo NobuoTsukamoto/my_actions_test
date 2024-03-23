@@ -154,6 +154,11 @@ jobs:
             libfreetype6-dev \
             libfontconfig1-dev \
             libpq-dev \
+            tcl* \
+            p7zip* \
+            gfortran-13 \
+            gcc-12-* \
+            gcc-11-* \
             -yq  || true
           sudo dpkg -r packages-microsoft-prod
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
