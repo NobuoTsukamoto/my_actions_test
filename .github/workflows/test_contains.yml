@@ -149,7 +149,6 @@ jobs:
             temurin-* \
             ant \
             ant-optional \
-            mongodb-org \
             libmysqlclient-dev \
             chrpath \
             libssl-dev \
