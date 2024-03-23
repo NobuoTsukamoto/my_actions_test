@@ -70,7 +70,8 @@ jobs:
           sudo rm -rf "/usr/local/bin/kustomize" || true
           sudo rm -rf "/usr/local/bin/kubectl" || true
           sudo rm -rf "/usr/local/bin/kind" || true
-          sudo rm -rf "/usr/local/bin/helm"
+          sudo rm -rf "/usr/local/bin/helm" || true
+          sudo rm -rf "/home/linuxbrew"
           sudo docker image prune --all --force
           sudo npm uninstall bazel
           rustup self uninstall -y
