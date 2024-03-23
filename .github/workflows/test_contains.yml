@@ -166,7 +166,6 @@ jobs:
             google-cloud-cli \
             heroku \
             hhvm \
-            
             -yq  || true
           sudo dpkg -r packages-microsoft-prod
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
