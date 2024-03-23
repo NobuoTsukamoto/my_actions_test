@@ -33,6 +33,7 @@ jobs:
       - name: Check space before cleanup
         run: |
           docker images
+          sudo rm -rf "~/work/*" || true
           sudo rm -rf "/opt/*" || true
           sudo rm -rf "/usr/share/dotnet" || true
           sudo rm -rf "$AGENT_TOOLSDIRECTORY" || true
