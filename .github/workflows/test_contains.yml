@@ -150,16 +150,10 @@ jobs:
             ant \
             ant-optional \
             libmysqlclient-dev \
-            chrpath \
-            libssl-dev \
             libxft-dev \
-            libfreetype6 \
             libfreetype6-dev \
-            libfontconfig1 \
             libfontconfig1-dev \
-            php* \
             libpq-dev \
-            
             -yq  || true
           sudo dpkg -r packages-microsoft-prod
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
