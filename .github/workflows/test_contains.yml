@@ -141,7 +141,8 @@ jobs:
             podman \
             buildah \
             skopeo \
-            -yq > /dev/null 2>&1 || true
+            temurin-* \
+            -yq  || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
           apt list --installed
