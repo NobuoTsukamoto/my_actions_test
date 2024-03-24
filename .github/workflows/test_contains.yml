@@ -80,8 +80,8 @@ jobs:
           sudo rm -rf "/usr/local/bin/bicep" || true
           sudo rm -rf "/usr/local/bin/.ghcup" || true
           sudo docker image prune --all --force
-          sudo npm uninstall bazel
-          sudo npm uninstall @bazel/bazelisk
+          sudo npm uninstall bazel || true
+          sudo npm uninstall bazelisk || true
           rustup self uninstall -y
           sudo apt purge \
             ansible \
@@ -166,8 +166,8 @@ jobs:
             google-cloud-cli \
             heroku \
             hhvm \
-            -yq  || true
-          sudo dpkg -r packages-microsoft-prod
+            -yq 　> /dev/null 2>&1 || true
+          sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
           apt list --installed
