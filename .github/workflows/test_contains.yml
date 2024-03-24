@@ -165,7 +165,7 @@ jobs:
             gcc-11-* \
             google-cloud-cli \
             heroku \
-            -yq　> /dev/null 2>&1 || true
+            -y || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
