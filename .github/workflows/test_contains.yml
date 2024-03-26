@@ -96,6 +96,7 @@ jobs:
           sudo rm -rf "/usr/local/bin/oc" || true
           sudo rm -rf "/usr/local/bin/ctest" || true
           sudo rm -rf "/usr/local/bin/cmake-gui" || true
+          sudo rm -rf "/usr/local/bin/ccmake" || true
           sudo rm -rf "/usr/local/bin/cpack" || true
           sudo rm -rf "/usr/local/bin/oras" || true
           sudo docker image prune --all --force
@@ -191,7 +192,7 @@ jobs:
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
           apt list --installed
-          ls -al /usr/local/bin
+          ls -al /usr/local/share
 
       - name: Build
         run: |
