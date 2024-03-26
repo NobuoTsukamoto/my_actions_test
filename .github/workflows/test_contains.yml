@@ -189,6 +189,7 @@ jobs:
             heroku \
             snmp \
             liblz4-dev \
+            man-db \
             -y || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
