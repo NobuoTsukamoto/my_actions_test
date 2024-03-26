@@ -79,6 +79,9 @@ jobs:
           sudo rm -rf "/usr/local/bin/azcopy*" || true
           sudo rm -rf "/usr/local/bin/bicep" || true
           sudo rm -rf "/usr/local/bin/.ghcup" || true
+          sudo rm -rf "/home/.nvm" || true
+          sudo rm -rf "/usr/bin/composer" || true
+          sudo rm -rf "/usr/local/bin/phpunit" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel || true
           sudo npm uninstall bazelisk || true
@@ -165,6 +168,7 @@ jobs:
             gcc-11-* \
             google-cloud-cli \
             heroku \
+            snmp \
             -y || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
