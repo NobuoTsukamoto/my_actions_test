@@ -100,7 +100,8 @@ jobs:
           sudo rm -rf "/usr/local/bin/cpack" || true
           sudo rm -rf "/usr/local/bin/oras" || true
           sudo rm -rf "/usr/local/share/chromium" | true
-          sudo rm -rf "/usr/local/powershell" | true
+          sudo rm -rf "/usr/local/share/powershell" | true
+          sudo rm -rf "/usr/local/share/doc" | true
           sudo docker image prune --all --force
           sudo npm uninstall bazel || true
           sudo npm uninstall bazelisk || true
@@ -195,7 +196,7 @@ jobs:
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
           apt list --installed
-          ls -al /usr/local/share/doc
+          ls -al /usr/share/
 
       - name: Build
         run: |
