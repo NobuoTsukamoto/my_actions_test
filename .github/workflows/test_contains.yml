@@ -82,6 +82,8 @@ jobs:
           sudo rm -rf "/home/.nvm" || true
           sudo rm -rf "/usr/bin/composer" || true
           sudo rm -rf "/usr/local/bin/phpunit" || true
+          sudo rm -rf "/usr/local/bin/pulumi-*" || true
+          sudo rm -rf "/usr/local/bin/oc" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel || true
           sudo npm uninstall bazelisk || true
