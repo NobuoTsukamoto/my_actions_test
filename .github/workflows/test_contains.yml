@@ -99,6 +99,7 @@ jobs:
           sudo rm -rf "/usr/local/bin/ccmake" || true
           sudo rm -rf "/usr/local/bin/cpack" || true
           sudo rm -rf "/usr/local/bin/oras" || true
+          sudo rm -rf "/usr/local/share/chromium" | true
           sudo docker image prune --all --force
           sudo npm uninstall bazel || true
           sudo npm uninstall bazelisk || true
