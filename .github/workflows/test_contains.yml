@@ -169,12 +169,13 @@ jobs:
             google-cloud-cli \
             heroku \
             snmp \
+            liblz4-dev \
             -y || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
           sudo apt-get autoclean -y > /dev/null 2>&1 || true
           apt list --installed
-          ls -al ~
+          ls -al /usr/local/bin
 
       - name: Build
         run: |
