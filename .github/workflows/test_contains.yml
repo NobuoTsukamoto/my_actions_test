@@ -192,8 +192,6 @@ jobs:
             liblz4-dev \
             man-db \
             packages-microsoft-prod \
-            perl* \
-            php* \
             -yq || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
