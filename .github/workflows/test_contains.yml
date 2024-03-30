@@ -203,7 +203,6 @@ jobs:
             *-dev \
             linux-headers-* \
             manpages \
-            esl-erlang \
             -yq || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
           sudo apt-get autoremove -y > /dev/null 2>&1 || true
