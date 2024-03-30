@@ -31,10 +31,6 @@ jobs:
           echo "Free space:"
           df -h
           sudo chown runner /mnt
-          cd /mnt
-          git clone  https://github.com/riscv/meta-riscv.git
-          ls -al /
-          ls -al ~
 
       - name: Cleanup
         run: |
