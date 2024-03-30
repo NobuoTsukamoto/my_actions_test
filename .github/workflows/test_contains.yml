@@ -30,9 +30,8 @@ jobs:
         run: |
           echo "Free space:"
           df -h
-          ls -al /mnt
-          cd /mnt
-          git clone  https://github.com/riscv/meta-riscv.git
+          ls -al /
+          ls -al ~
 
       - name: Cleanup
         run: |
