@@ -79,6 +79,7 @@ jobs:
           sudo rm -rf "/usr/local/bin/azcopy_11.3.1" || true
           sudo rm -rf "/usr/local/bin/bicep" || true
           sudo rm -rf "/usr/local/bin/.ghcup" || true
+          sudo rm -rf "/usr/local/.ghcup" || true
           sudo rm -rf "/home/.nvm" || true
           sudo rm -rf "/usr/bin/composer" || true
           sudo rm -rf "/usr/local/bin/phpunit" || true
