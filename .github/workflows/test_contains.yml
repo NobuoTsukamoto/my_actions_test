@@ -99,6 +99,10 @@ jobs:
           sudo rm -rf "/usr/local/bin/ccmake" || true
           sudo rm -rf "/usr/local/bin/cpack" || true
           sudo rm -rf "/usr/local/bin/oras" || true
+          sudo rm -rf "/usr/local/share/emacs" || true
+          sudo rm -rf "/usr/local/share/fonts" || true
+          sudo rm -rf "/usr/local/share/icons" || true
+          sudo rm -rf "/usr/local/share/man" || true
           sudo rm -rf "/usr/local/share/chromium" || true
           sudo rm -rf "/usr/local/share/powershell" || true
           sudo rm -rf "/usr/local/share/doc" || true
