@@ -195,6 +195,7 @@ jobs:
             packages-microsoft-prod \
             perl \
             *-dev \
+            linux-headers-* \
             manpages \
             -yq || true
           sudo dpkg -r packages-microsoft-prod　> /dev/null 2>&1 || true
