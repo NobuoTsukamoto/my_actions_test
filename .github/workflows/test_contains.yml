@@ -110,6 +110,7 @@ jobs:
           sudo rm -rf "/home/perflog" || true
           sudo rm -rf "/usr/libexec/docker/cli-plugins" || true
           sudo rm -rf "/usr/bin/docker-credential-ecr-login" || true
+          sudo rm -rf "/usr/local/lib/lein" || true
           sudo docker image prune --all --force
           sudo npm uninstall bazel || true
           sudo npm uninstall bazelisk || true
